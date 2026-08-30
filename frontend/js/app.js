@@ -94,7 +94,7 @@ async function remindersPage(){
 async function cancelReminder(id){try{await api("/reminders/"+id,{method:"DELETE"});toast("Reminder cancelled");remindersPage()}catch(e){toast(e.message)}}
 window.cancelReminder=cancelReminder;
 
-const API="http://localhost:5000/api";
+const API="/api";
 const state={user:null,patients:[],page:"dashboard"};
 
 const $=id=>document.getElementById(id);
